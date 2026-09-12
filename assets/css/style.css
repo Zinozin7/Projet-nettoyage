@@ -1152,6 +1152,79 @@ button:focus-visible {
   }
 }
 
+/* ===================== INCLUS DANS L'INTERVENTION (chips) ===================== */
+.includes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.include-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--title);
+}
+
+.include-item .icon {
+  color: var(--primary);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .includes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .includes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .includes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.issue-list li .icon {
+  color: #c2451c;
+}
+
+.text-link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.text-link:hover {
+  color: var(--primary-dark);
+}
+
+.cross-link-box {
+  background: var(--bg-tint);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-top: 40px;
+}
+
+.cross-link-box p {
+  margin: 0;
+}
+
 /* ===================== BREADCRUMB (pages prestations) ===================== */
 .breadcrumb {
   display: flex;
