@@ -1,21 +1,22 @@
 /* ===========================================================
-   Seisada — Entreprise de nettoyage à Clermont-Ferrand
+   Balayo — Entreprise de nettoyage dans le Val-de-Marne
    Feuille de style commune à toutes les pages du site.
    Variables centralisées dans :root pour modification rapide.
    =========================================================== */
 
 :root {
-  /* Couleurs (section 0.3 du cahier des charges) */
-  --primary: #1857d6;
-  --primary-dark: #0f3d99;
+  /* Couleurs — palette alignée sur le logo Balayo (bleu marine + vert) */
+  --primary: #0d2a52;
+  --primary-dark: #081d3a;
+  --accent-green: #6fb43e;
   --secondary: #ffffff;
-  --title: #0f2f6b;
+  --title: #0d2a52;
   --text: #16213a;
   --muted: #5b6577;
   --bg: #ffffff;
   --bg-soft: #f6f8fb;
-  --bg-tint: rgba(24, 87, 214, 0.06);
-  --border: rgba(15, 47, 107, 0.10);
+  --bg-tint: rgba(13, 42, 82, 0.06);
+  --border: rgba(13, 42, 82, 0.10);
 
   /* Formes */
   --radius: 20px;
@@ -254,10 +255,18 @@ p {
   font-weight: 800;
   color: var(--title);
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
 }
 
 .logo span {
   color: var(--primary);
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .main-nav {
@@ -737,7 +746,7 @@ body.no-scroll {
 }
 
 .check-list .icon {
-  color: var(--primary);
+  color: var(--accent-green);
   width: 20px;
   height: 20px;
   margin-top: 2px;
