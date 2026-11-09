@@ -1304,3 +1304,61 @@ button:focus-visible {
   color: #fff;
   font-weight: 700;
 }
+
+/* ===================== AVANT / APRÈS (PHOTOS RÉELLES) ===================== */
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.before-after-pair {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.before-after-pair .ba-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.before-after-pair figure {
+  margin: 0;
+  position: relative;
+}
+
+.before-after-pair img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.before-after-pair figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(13, 42, 82, 0.85);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.before-after-pair .ba-title {
+  padding: 14px 18px;
+  font-weight: 600;
+  color: var(--title);
+}
+
+@media (max-width: 560px) {
+  .before-after-pair img {
+    height: 200px;
+  }
+}
