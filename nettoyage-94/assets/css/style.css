@@ -5,10 +5,11 @@
    =========================================================== */
 
 :root {
-  /* Couleurs — palette alignée sur le logo Balayo (bleu marine + vert) */
-  --primary: #0d2a52;
-  --primary-dark: #081d3a;
-  --accent-green: #6fb43e;
+  /* Couleurs — palette alignée sur le logo Balayo (vert en accent principal, bleu marine en second plan) */
+  --primary: #5aa334;
+  --primary-dark: #45801f;
+  --navy: #0d2a52;
+  --navy-dark: #081d3a;
   --secondary: #ffffff;
   --title: #0d2a52;
   --text: #16213a;
@@ -746,7 +747,7 @@ body.no-scroll {
 }
 
 .check-list .icon {
-  color: var(--accent-green);
+  color: var(--primary);
   width: 20px;
   height: 20px;
   margin-top: 2px;
@@ -883,7 +884,7 @@ body.no-scroll {
 
 /* ===================== ZONE D'INTERVENTION ===================== */
 .zone-box {
-  background: var(--primary);
+  background: var(--navy);
   border-radius: var(--radius);
   padding: 56px;
   color: #fff;
@@ -1027,7 +1028,7 @@ body.no-scroll {
 
 /* ===================== CTA FINAL ===================== */
 .cta-final {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, var(--navy), var(--navy-dark));
   border-radius: var(--radius);
   padding: 64px 48px;
   text-align: center;
