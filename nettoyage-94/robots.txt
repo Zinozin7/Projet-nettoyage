@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nettoyage-94.fr/sitemap.xml
