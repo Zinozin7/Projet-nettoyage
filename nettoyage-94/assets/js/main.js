@@ -1,4 +1,4 @@
-/* Seisada — interactions légères : header sticky, menu mobile, dropdown, FAQ */
+/* Balayo — interactions légères : header sticky, menu mobile, dropdown, FAQ, bouton d'appel flottant */
 document.addEventListener("DOMContentLoaded", function () {
   /* Header : ombre au scroll */
   var header = document.querySelector(".site-header");
@@ -8,6 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* Bouton d'appel flottant : masqué en haut de page (un bouton d'appel existe déjà
+     dans le bloc d'accueil), affiché après un léger défilement pour éviter tout
+     chevauchement avec le contenu de la première vue. */
+  var floatingCall = document.querySelector(".floating-call");
+  if (floatingCall) {
+    var onFloatingScroll = function () {
+      floatingCall.classList.toggle("is-visible", window.scrollY > 420);
+    };
+    onFloatingScroll();
+    window.addEventListener("scroll", onFloatingScroll, { passive: true });
   }
 
   /* Menu mobile */
