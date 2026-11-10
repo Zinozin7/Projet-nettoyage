@@ -388,6 +388,7 @@ p {
   border-radius: 10px;
   border: 1px solid var(--border);
   background: #fff;
+  color: var(--title);
   cursor: pointer;
 }
 
@@ -440,9 +441,11 @@ p {
   border-radius: 10px;
   border: 1px solid var(--border);
   background: #fff;
+  color: var(--title);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .mobile-menu-body {
