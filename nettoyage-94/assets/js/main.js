@@ -10,16 +10,43 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* Bouton d'appel flottant : masqué en haut de page (un bouton d'appel existe déjà
-     dans le bloc d'accueil), affiché après un léger défilement pour éviter tout
-     chevauchement avec le contenu de la première vue. */
+  /* Boutons d'appel et WhatsApp flottants : masqués en haut de page (un bouton
+     d'appel existe déjà dans le bloc d'accueil), affichés après un léger
+     défilement pour éviter tout chevauchement avec le contenu de la première vue. */
   var floatingCall = document.querySelector(".floating-call");
-  if (floatingCall) {
+  var floatingWhatsapp = document.querySelector(".floating-whatsapp");
+  if (floatingCall || floatingWhatsapp) {
     var onFloatingScroll = function () {
-      floatingCall.classList.toggle("is-visible", window.scrollY > 420);
+      var visible = window.scrollY > 420;
+      if (floatingCall) floatingCall.classList.toggle("is-visible", visible);
+      if (floatingWhatsapp) floatingWhatsapp.classList.toggle("is-visible", visible);
     };
     onFloatingScroll();
     window.addEventListener("scroll", onFloatingScroll, { passive: true });
+  }
+
+  /* Formulaire de contact : pas de backend sur ce site statique, l'envoi
+     ouvre WhatsApp avec un message pré-rempli à partir des champs saisis. */
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = contactForm.querySelector("#cf-name").value.trim();
+      var phone = contactForm.querySelector("#cf-phone").value.trim();
+      var service = contactForm.querySelector("#cf-service").value;
+      var message = contactForm.querySelector("#cf-message").value.trim();
+
+      var lines = [
+        "Bonjour Balayo, je souhaite une demande de devis.",
+        "Nom : " + name,
+        "Téléphone : " + phone,
+        "Besoin : " + service
+      ];
+      if (message) lines.push("Message : " + message);
+
+      var text = encodeURIComponent(lines.join("\n"));
+      window.open("https://wa.me/33786438005?text=" + text, "_blank", "noopener");
+    });
   }
 
   /* Menu mobile */
