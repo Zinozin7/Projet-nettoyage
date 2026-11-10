@@ -833,6 +833,16 @@ body.no-scroll {
   margin: 0 auto;
 }
 
+/* ===================== IMAGES D'ARTICLE ===================== */
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin: 28px 0 8px;
+}
+
 /* ===================== FORMULAIRE DE CONTACT ===================== */
 .contact-form {
   display: flex;
