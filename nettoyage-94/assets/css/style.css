@@ -1185,6 +1185,17 @@ body.no-scroll {
   color: #fff;
 }
 
+.site-footer .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.site-footer .btn-outline:hover {
+  background: #fff;
+  color: var(--title);
+  border-color: #fff;
+}
+
 .footer-contact li {
   display: flex;
   align-items: center;
