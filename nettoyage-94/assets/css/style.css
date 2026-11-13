@@ -1421,6 +1421,7 @@ button:focus-visible {
   width: 28px;
   height: 28px;
   fill: #fff;
+  stroke: none;
 }
 
 @media (max-width: 480px) {
