@@ -145,7 +145,10 @@
       </div>
 
       <div>
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/contact.balayo@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis - Site Balayo">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://nettoyage-94.fr/contact.html?envoye=1">
           <div class="form-row">
             <label for="cf-name">Nom</label>
             <input type="text" id="cf-name" name="name" required>
@@ -172,8 +175,8 @@
             <label for="cf-message">Votre message</label>
             <textarea id="cf-message" name="message" rows="4" placeholder="Décrivez votre besoin (surface, ville, délai souhaité...)"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Envoyer sur WhatsApp</button>
-          <p class="form-note">En cliquant, WhatsApp s'ouvre avec votre demande pré-remplie, adressée directement à Balayo.</p>
+          <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+          <p class="form-note">En cliquant, votre demande est envoyée directement par e-mail à Balayo.</p>
         </form>
       </div>
     </div>
