@@ -1398,7 +1398,7 @@ button:focus-visible {
   width: 56px;
   height: 56px;
   background: #25d366;
-  border-radius: 50%;
+  border-radius: 29%;
   box-shadow: 0 10px 30px rgba(0,0,0,0.22);
   opacity: 0;
   pointer-events: none;
