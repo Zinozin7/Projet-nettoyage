@@ -84,16 +84,4 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://nettoyage-94.fr/blog/nettoyage-apres-incendie-val-de-marne</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nettoyage-94.fr/blog/nettoyage-apres-degat-des-eaux-val-de-marne</loc>
-    <lastmod>2026-11-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
 </urlset>
