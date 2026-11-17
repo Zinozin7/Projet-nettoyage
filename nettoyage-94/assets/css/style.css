@@ -497,6 +497,14 @@ body.no-scroll {
   align-items: center;
 }
 
+.hero-grid.hero-grid-solo {
+  grid-template-columns: 1fr;
+}
+
+.hero-grid.hero-grid-solo .hero-text {
+  max-width: 760px;
+}
+
 .hero-text p {
   max-width: 540px;
 }
